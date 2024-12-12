@@ -44,6 +44,7 @@ services:
   vote-system-ui:
     container_name: vote-system-ui
     hostname: vote-system-ui
+    image: nginx:1.27
     build:
       context: ./ui
       dockerfile: Dockerfile
@@ -61,14 +62,14 @@ services:
         ftp_proxy: ${FTP_PROXY:-}
         no_proxy: ${NO_PROXY:-}
     environment:
-      HTPP_PROXY: ${HTPP_PROXY:-}
-      HTTPS_PROXY: ${HTTPS_PROXY:-}
-      FTP_PROXY: ${FTP_PROXY:-}
-      NO_PROXY: ${NO_PROXY:-}
-      http_proxy: ${HTTP_PROXY:-}
-      https_proxy: ${HTTPS_PROXY:-}
-      ftp_proxy: ${FTP_PROXY:-}
-      no_proxy: ${NO_PROXY:-}
+      - HTPP_PROXY: ${HTPP_PROXY:-}
+      - HTTPS_PROXY: ${HTTPS_PROXY:-}
+      - FTP_PROXY: ${FTP_PROXY:-}
+      - NO_PROXY: ${NO_PROXY:-}
+      - http_proxy: ${HTTP_PROXY:-}
+      - https_proxy: ${HTTPS_PROXY:-}
+      - ftp_proxy: ${FTP_PROXY:-}
+      - no_proxy: ${NO_PROXY:-}
     ports:
       - ${API_LLM_PORT}:8000
     user: ${USERNAME}
