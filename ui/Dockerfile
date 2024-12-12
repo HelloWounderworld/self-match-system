@@ -35,7 +35,7 @@ RUN apt-get update \
     && apt-get install -y nginx
 
 WORKDIR /etc/nginx/conf.d
-COPY ./fake-news.conf .
+COPY ./vote-system.conf .
 
 WORKDIR /var
 RUN mkdir www
