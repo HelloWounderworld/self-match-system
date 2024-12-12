@@ -70,12 +70,13 @@ services:
       - https_proxy: ${HTTPS_PROXY:-}
       - ftp_proxy: ${FTP_PROXY:-}
       - no_proxy: ${NO_PROXY:-}
-    ports:
-      - ${API_LLM_PORT}:8000
     user: ${USERNAME}
-    working_dir: /teramatsu/ui
+    working_dir: /home/teramatsu/ui
     volumes:
-      - ./:/teramatsu/ui
+      - ./ui:/home/teramatsu/ui
+    ports:
+      - ${UI_PORT_DEV}:8080
+      - ${UI_PORT_PROD}:8081
     tty: true
     logging:
       driver: json-file
