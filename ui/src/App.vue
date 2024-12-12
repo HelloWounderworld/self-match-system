@@ -1,49 +1,119 @@
 <template>
-  <div class="text-center py-5 bg-light">
+  <div class="app-container">
     <!-- Header Section -->
-    <div class="d-flex justify-content-between align-items-center px-4">
-      <img src="./assets/logo.png" alt="NHK Logo" class="img-fluid" style="height: 40px;" />
-    </div>
+    <header class="header">
+      <img src="./assets/logo.jpeg" alt="NHK Logo" class="logo" />
+    </header>
 
     <!-- Main Content -->
-    <div class="mt-4">
+    <main class="main-content">
       <!-- Election Logo -->
-      <img src="./assets/logo.png" alt="Election 2024" class="img-fluid mb-3" style="height: 80px;" />
-      <h2 class="h5">人気番組 ボートマッチ</h2>
-      <img src="./assets/vote_logo.png" alt="Vote Icon" class="img-fluid my-4" style="width: 150px; height: auto;" />
-      <p>あなたの好きな番組をお選びください。</p>
-    </div>
+      <img src="./assets/logo.jpeg" alt="Election 2024" class="election-logo" />
+      <h2 class="title">衆議院選挙2024 ボートマッチ</h2>
+      <img src="./assets/vote_logo.png" alt="Vote Icon" class="vote-icon" />
+      <p class="description">あなたと候補者の考え方の一致度がわかります。</p>
 
-    <!-- Start Button -->
-    <button class="btn btn-danger btn-lg rounded-pill mt-4" @click="startVoting">
-      スタートする
-    </button>
+      <!-- Start Button -->
+      <button class="start-button">スタートする</button>
+    </main>
 
-    <!-- Footer Button -->
-    <div class="mt-4">
-      <button class="btn btn-outline-secondary rounded-pill px-4" @click="showInfo">
-        仕組み
-      </button>
-    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <button class="footer-button">仕組み</button>
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
   name: "VoteMatchApp",
-  methods: {
-    startVoting() {
-      // Lógica para iniciar a votação
-      alert("Iniciando a votação...");
-    },
-    showInfo() {
-      // Lógica para mostrar informações
-      alert("Aqui estão as informações sobre o sistema.");
-    }
-  }
 };
 </script>
 
 <style scoped>
-/* Adicione estilos personalizados aqui, se necessário */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  text-align: center;
+  background-color: #f8f9fa; /* Light background */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Main Content */
+.main-content {
+  margin-top: 30px;
+}
+
+.election-logo {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.vote-icon {
+  width: 150px;
+  height: auto;
+  margin: 20px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Start Button */
+.start-button {
+  background-color: #f44336; /* Red color */
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.start-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Footer */
+.footer {
+  margin-top: 30px;
+}
+
+.footer-button {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-button:hover {
+  border-color: #aaa;
+}
 </style>
