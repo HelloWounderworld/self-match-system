@@ -65,7 +65,7 @@ COPY . .
 RUN npm install \
     && npm install bootstrap \
     && npm run build \
-    && cp -r /home/${USERNAME}/ui1/dist/* /var/www/ \
+    && cp -r /home/${USERNAME}/ui/dist/* /var/www/ \
     && service nginx start
 
 CMD ["npm", "run", "serve"]
