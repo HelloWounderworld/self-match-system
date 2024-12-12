@@ -9,9 +9,9 @@
     <main class="main-content">
       <!-- Election Logo -->
       <img src="./assets/logo.jpeg" alt="Election 2024" class="election-logo" />
-      <h2 class="title">衆議院選挙2024 ボートマッチ</h2>
+      <h2 class="title">人気番組ボートマッチ</h2>
       <img src="./assets/vote_logo.png" alt="Vote Icon" class="vote-icon" />
-      <p class="description">あなたと候補者の考え方の一致度がわかります。</p>
+      <p class="description">あなたの好きな番組は？</p>
 
       <!-- Start Button -->
       <button class="start-button">スタートする</button>
