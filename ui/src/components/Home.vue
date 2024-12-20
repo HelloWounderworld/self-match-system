@@ -45,8 +45,7 @@ body {
 .app-container {
     text-align: center;
     background-color: #f8f9fa;
-    /* Light background */
-    padding: 20px;
+    padding: 2vw;
     min-height: 100vh;
 }
 
@@ -54,48 +53,47 @@ body {
 .header {
     display: flex;
     justify-content: flex-end;
-    padding: 10px 20px;
+    padding: 1vw 2vw;
 }
 
 .logo {
-    height: 40px;
+    height: 5vh;
 }
 
 /* Main Content */
 .main-content {
-    margin-top: 30px;
+    margin-top: 3vh;
 }
 
 .election-logo {
-    height: 80px;
-    margin-bottom: 20px;
+    height: 10vh;
+    margin-bottom: 2vh;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 3vw;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 .vote-icon {
-    width: 150px;
+    width: 20vw;
     height: auto;
-    margin: 20px 0;
+    margin: 2vh 0;
 }
 
 .description {
-    font-size: 14px;
+    font-size: 2vw;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 3vh;
 }
 
 /* Start Button */
 .start-button {
     background-color: #f44336;
-    /* Red color */
     color: white;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 2.5vw;
+    padding: 1vw 2vw;
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -108,15 +106,15 @@ body {
 
 /* Footer */
 .footer {
-    margin-top: 30px;
+    margin-top: 3vh;
 }
 
 .footer-button {
     background-color: transparent;
     border: 2px solid #ccc;
-    padding: 8px 20px;
+    padding: 1vw 2vw;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 2vw;
     cursor: pointer;
 }
 
